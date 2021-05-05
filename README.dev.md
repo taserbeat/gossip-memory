@@ -6,3 +6,10 @@ React + TypeScript で作ったフロントアプリを GitHub Pages でホス�
 
 - TypeScript 4.2.3
 - React 17.0.2
+
+## 開発ツール
+
+- Visual Studio Code
+- CircleCI
+- Github Pages
+- Figma
