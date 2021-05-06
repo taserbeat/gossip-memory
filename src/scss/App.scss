@@ -1,0 +1,47 @@
+@import "colors";
+@import "dimensions";
+
+/* https://qiita.com/YoshiyukiKato/items/666a66d1b57ce70c910b */
+
+header {
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header_height;
+  display: flex;
+  align-items: center;
+  .logo {
+    margin: 0 $logo_margin_horizon;
+    p {
+      display: inline-block;
+      min-width: 100%;
+      margin: 0;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.content {
+  color: $black;
+  margin: $header_height 0 $footer_height 0;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $dark;
+  height: $footer_height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
