@@ -2,6 +2,7 @@
   "name": "gossip-memory",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://taserbeat.github.io/gossip-memory",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,7 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "deploy": "yarn build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
