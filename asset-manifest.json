@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/gossip-memory/static/css/main.0917f2a7.chunk.css",
+    "main.js": "/gossip-memory/static/js/main.20f9e0f5.chunk.js",
+    "main.js.map": "/gossip-memory/static/js/main.20f9e0f5.chunk.js.map",
+    "runtime-main.js": "/gossip-memory/static/js/runtime-main.620769d8.js",
+    "runtime-main.js.map": "/gossip-memory/static/js/runtime-main.620769d8.js.map",
+    "static/js/2.06f9ed82.chunk.js": "/gossip-memory/static/js/2.06f9ed82.chunk.js",
+    "static/js/2.06f9ed82.chunk.js.map": "/gossip-memory/static/js/2.06f9ed82.chunk.js.map",
+    "index.html": "/gossip-memory/index.html",
+    "static/css/main.0917f2a7.chunk.css.map": "/gossip-memory/static/css/main.0917f2a7.chunk.css.map",
+    "static/js/2.06f9ed82.chunk.js.LICENSE.txt": "/gossip-memory/static/js/2.06f9ed82.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.620769d8.js",
+    "static/js/2.06f9ed82.chunk.js",
+    "static/css/main.0917f2a7.chunk.css",
+    "static/js/main.20f9e0f5.chunk.js"
+  ]
+}
