@@ -30,6 +30,27 @@ header {
   height: auto;
 }
 
+/* feature/memory */
+@media screen and (min-width: $simple_box_list_media_min_width) {
+  .simple-box_list {
+    display: flex;
+  }
+}
+
+.simple-box {
+  width: $simple_box_width;
+  min-width: $simple_box_min_width;
+  height: $simple_box_height;
+  margin: $simple_box_margin_vertical $simple_box_margin_horizontal;
+  text-align: center;
+  border: $box_border_size solid $black;
+  text-decoration: underline;
+  p {
+    font-size: $box_font_size;
+    margin-bottom: 1rem;
+  }
+}
+
 footer {
   position: fixed;
   bottom: 0;
