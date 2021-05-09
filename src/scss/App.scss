@@ -44,10 +44,18 @@ header {
   margin: $simple_box_margin_vertical $simple_box_margin_horizontal;
   text-align: center;
   border: $box_border_size solid $black;
-  text-decoration: underline;
-  p {
+  .box-title {
     font-size: $box_font_size;
     margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+}
+
+.simple-list {
+  .simple-listitem {
+    .hint {
+      text-decoration: none;
+    }
   }
 }
 

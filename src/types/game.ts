@@ -9,7 +9,7 @@ type AdultDungeon = "Forest Temple" | "Fire Temple" | "Water Temple" | "Spirit T
 export type Dungeon = ChildDungeon | AdultDungeon;
 
 /** オーバーワールド名 */
-export type Overworld = "Hylure Field" | "Lost Wood" | "Sacred Forest Meadow" | "Death Mountain Trail" |
+export type Overworld = "Hyrule Field" | "Lost Wood" | "Sacred Forest Meadow" | "Death Mountain Trail" |
   "Death Mountain Crater" | "Zora's River" | "Zora's Fountain" | "Lake Hylia" |
   "Hyrule Castle" | "Gerudo Valley" | "Gerudo's Fortress" | "Haunted Wasteland" |
   "Desert Colossus" | "Graveyard";

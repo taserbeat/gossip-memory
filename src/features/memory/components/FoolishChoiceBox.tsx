@@ -6,8 +6,8 @@ interface FoolishChoiceBoxProps {
 
 const FoolishChoiceBox = (props: FoolishChoiceBoxProps) => {
   return (
-    <div className="simple-box fc">
-      <p>Foolish Choice</p>
+    <div className="simple-box fc-box">
+      <p className="box-title">Foolish Choice</p>
     </div>
   )
 }

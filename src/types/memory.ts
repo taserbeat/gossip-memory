@@ -3,6 +3,7 @@ import { Dungeon, Overworld, Town } from "./game"
 
 /** Way of the Hero */
 /* https://wiki.ootrandomizer.com/index.php?title=Hints#Way_of_the_Hero */
+export type WayOfTheHeroHint = Dungeon | Overworld | Town;
 export type WayOfTheHero = {
   hint: Dungeon | Overworld | Town,
 }

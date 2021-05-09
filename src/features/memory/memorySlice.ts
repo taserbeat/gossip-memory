@@ -19,18 +19,27 @@ export const memorySlice = createSlice({
   name: 'memory',
   initialState,
   reducers: {
+    /* Way of The Hero */
     addWayOfTheHero: (state, action: PayloadAction<WayOfTheHero>) => {
       state.wayOfTheHeros.push(action.payload);
     },
+    removeWayOfTheHero: (state, action: PayloadAction<WayOfTheHero>) => {
+      state.wayOfTheHeros = state.wayOfTheHeros.filter(woth => woth.hint !== action.payload.hint);
+    },
+    /* Foolish choice */
     addFoolishChoice: (state, action: PayloadAction<FoolishChoice>) => {
       state.foolishChoices.push(action.payload);
     },
+    /*  Location hint */
     addlocationHint: (state, action: PayloadAction<LocationHint>) => {
       state.locationHints.push(action.payload);
     },
   },
   extraReducers: {},
 });
+
+/* アクション */
+export const { addWayOfTheHero, removeWayOfTheHero } = memorySlice.actions;
 
 /* セレクタ */
 export const selectWayOfTheHeros = (state: RootState) => state.memory.wayOfTheHeros;
