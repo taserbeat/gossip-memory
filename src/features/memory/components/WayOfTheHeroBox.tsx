@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { List, ListItem, ListItemSecondaryAction, Menu, MenuItem, IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
-import { selectWayOfTheHeros } from '../memorySlice';
-import { WayOfTheHero, WayOfTheHeroHint } from '../../../types/memory';
+import { selectWayOfTheHeros, selectFoolishChoices } from '../memorySlice';
+import { WayOfTheHero, WayOfTheHeroHint, FoolishChoiceHint } from '../../../types/memory';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addWayOfTheHero, removeWayOfTheHero } from '../memorySlice';
@@ -12,7 +12,7 @@ interface WayOfTheHeroBoxProps {
 
 }
 
-const wayOfTheHeroHintTable: WayOfTheHeroHint[] = [
+export const hintAll: (WayOfTheHeroHint | FoolishChoiceHint)[] = [
   "Deku Tree",
   "Dodongo's Cavern",
   "Jabu Jabu",
@@ -48,9 +48,19 @@ const wayOfTheHeroHintTable: WayOfTheHeroHint[] = [
 
 const WayOfTheHeroBox = (props: WayOfTheHeroBoxProps) => {
   const wayOfTheHeros = useSelector(selectWayOfTheHeros);
+  const foolishChoices = useSelector(selectFoolishChoices);
   const dispatch = useDispatch();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  /** 選択可能なWayOfTheHeroのリスト */
+  const wayOfTheHeroTable = useMemo(() => {
+    return hintAll.filter(
+      hint => !wayOfTheHeros.some(woth => woth.hint === hint)
+    ).filter(
+      hint => !foolishChoices.some(fc => fc.hint === hint)
+    );
+  }, [wayOfTheHeros, foolishChoices]);
 
   const handleAddClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -97,9 +107,9 @@ const WayOfTheHeroBox = (props: WayOfTheHeroBoxProps) => {
         {/* https://material-ui.com/ja/components/menus/ */}
         <Menu open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={handleMenuClose}>
           {
-            wayOfTheHeroHintTable.map((woth) => (
-              <MenuItem onClick={(event) => handleListItemClick(woth)}>
-                {woth}
+            wayOfTheHeroTable.map((hint) => (
+              <MenuItem onClick={(event) => handleListItemClick(hint)}>
+                {hint}
               </MenuItem>
             ))
           }

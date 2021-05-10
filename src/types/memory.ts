@@ -5,13 +5,14 @@ import { Dungeon, Overworld, Town } from "./game"
 /* https://wiki.ootrandomizer.com/index.php?title=Hints#Way_of_the_Hero */
 export type WayOfTheHeroHint = Dungeon | Overworld | Town;
 export type WayOfTheHero = {
-  hint: Dungeon | Overworld | Town,
+  hint: WayOfTheHeroHint,
 }
 
 /** Foolish choice */
 /* https://wiki.ootrandomizer.com/index.php?title=Hints#Foolish_Choice */
+export type FoolishChoiceHint = Dungeon | Overworld | Town;
 export type FoolishChoice = {
-  hint: Dungeon | Overworld | Town,
+  hint: FoolishChoiceHint,
 }
 
 /** Location Hint */
