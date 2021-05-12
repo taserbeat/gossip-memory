@@ -7,7 +7,7 @@ interface BasePageProps {
 
 const BasePage: React.FC<BasePageProps> = (props) => {
   return (
-    <div>
+    <div className="App">
       <header>
         <div className="logo">
           <p>Gossip Memory</p>

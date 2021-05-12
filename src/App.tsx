@@ -4,7 +4,6 @@ import Memory from './features/memory/Memory';
 import './scss/App.scss';
 
 function App() {
-
   return (
     <BasePage>
       <Memory />

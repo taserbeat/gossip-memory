@@ -54,9 +54,13 @@ const FoolishChoiceBox = (props: FoolishChoiceBoxProps) => {
       <p className="box-title">Foolish Choice</p>
       <List className="simple-list woth-list">
         {
-          foolishChoices.map(foolishChoice => {
+          foolishChoices.map((foolishChoice, i) => {
             return (
-              <ListItem className="simple-listitem woth-listitem">
+              <ListItem
+                className="simple-listitem woth-listitem"
+                key={`fc-hint$${i}`}
+                style={{ paddingTop: 0, paddingBottom: 0 }}
+              >
                 <p className="hint">{foolishChoice.hint}</p>
                 <ListItemSecondaryAction>
                   <IconButton onClick={(event) => handleDeleteClick(foolishChoice)}>
@@ -74,8 +78,8 @@ const FoolishChoiceBox = (props: FoolishChoiceBoxProps) => {
         {/* https://material-ui.com/ja/components/menus/ */}
         <Menu open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={handleMenuClose}>
           {
-            foolishChoiceTable.map((hint) => (
-              <MenuItem onClick={(event) => handleListItemClick(hint)}>
+            foolishChoiceTable.map((hint, i) => (
+              <MenuItem key={`fc-select$${i}`} onClick={(event) => handleListItemClick(hint)}>
                 {hint}
               </MenuItem>
             ))

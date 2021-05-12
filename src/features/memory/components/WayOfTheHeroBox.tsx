@@ -87,9 +87,13 @@ const WayOfTheHeroBox = (props: WayOfTheHeroBoxProps) => {
       <p className="box-title">Way of the Hero</p>
       <List className="simple-list woth-list">
         {
-          wayOfTheHeros.map(wayOfTheHero => {
+          wayOfTheHeros.map((wayOfTheHero, i) => {
             return (
-              <ListItem className="simple-listitem woth-listitem">
+              <ListItem
+                className="simple-listitem woth-listitem"
+                key={`woth-hint$${i}`}
+                style={{ paddingTop: 0, paddingBottom: 0 }}
+              >
                 <p className="hint">{wayOfTheHero.hint}</p>
                 <ListItemSecondaryAction>
                   <IconButton onClick={(event) => handleDeleteClick(wayOfTheHero)}>
@@ -107,8 +111,8 @@ const WayOfTheHeroBox = (props: WayOfTheHeroBoxProps) => {
         {/* https://material-ui.com/ja/components/menus/ */}
         <Menu open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={handleMenuClose}>
           {
-            wayOfTheHeroTable.map((hint) => (
-              <MenuItem onClick={(event) => handleListItemClick(hint)}>
+            wayOfTheHeroTable.map((hint, i) => (
+              <MenuItem key={`woth-select$${i}`} onClick={(event) => handleListItemClick(hint)}>
                 {hint}
               </MenuItem>
             ))
