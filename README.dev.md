@@ -10,6 +10,5 @@ React + TypeScript で作ったフロントアプリを GitHub Pages でホス�
 ## 開発ツール
 
 - Visual Studio Code
-- CircleCI
 - Github Pages
 - Figma
