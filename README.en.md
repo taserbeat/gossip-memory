@@ -6,7 +6,8 @@ Tracking the hints heard from gossip stones in [OoTR](https://ootrandomizer.com/
 
 # Features
 
-Gossip stone gives the hint to beat the game seed quickly in playing randomizer. This application provides you to memo that hints.
+Gossip stone gives the hint to beat the game seed quickly in playing randomizer.  
+This application provides you to memo that hints.
 
 # How to use it
 
