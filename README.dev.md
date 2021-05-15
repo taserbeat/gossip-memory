@@ -9,6 +9,6 @@ React + TypeScript で作ったフロントアプリを GitHub Pages でホス�
 
 ## 開発ツール
 
-- Visual Studio Code
-- Github Pages
-- Figma
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Github Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)
+- [Figma](https://www.figma.com/)
