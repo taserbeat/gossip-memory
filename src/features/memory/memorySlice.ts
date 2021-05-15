@@ -34,8 +34,11 @@ export const memorySlice = createSlice({
       state.foolishChoices = state.foolishChoices.filter(fc => fc.hint !== action.payload.hint);
     },
     /*  Location hint */
-    addlocationHint: (state, action: PayloadAction<LocationHint>) => {
+    addLocationHint: (state, action: PayloadAction<LocationHint>) => {
       state.locationHints.push(action.payload);
+    },
+    removeLocationHint: (state, action: PayloadAction<LocationHint>) => {
+      state.locationHints = state.locationHints.filter(lc => lc.location !== action.payload.location);
     },
   },
   extraReducers: {},
@@ -44,6 +47,7 @@ export const memorySlice = createSlice({
 /* アクション */
 export const { addWayOfTheHero, removeWayOfTheHero } = memorySlice.actions;
 export const { addFoolishChoice, removeFoolishChoice } = memorySlice.actions;
+export const { addLocationHint, removeLocationHint } = memorySlice.actions;
 
 /* セレクタ */
 export const selectWayOfTheHeros = (state: RootState) => state.memory.wayOfTheHeros;
