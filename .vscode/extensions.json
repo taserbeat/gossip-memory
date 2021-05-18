@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-        "esbenp.prettier-vscode",
-        "sibiraj-s.vscode-scss-formatter",
-        "editorconfig.editorconfig",
-        "msjsdiag.debugger-for-chrome"
-    ]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "sibiraj-s.vscode-scss-formatter",
+    "editorconfig.editorconfig",
+    "msjsdiag.debugger-for-chrome"
+  ]
 }

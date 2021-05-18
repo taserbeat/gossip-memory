@@ -1,9 +1,9 @@
 ---
 name: Todo task
 about: 新しいタスクや課題を作成する
-title: ""
-labels: ""
-assignees: ""
+title: ''
+labels: ''
+assignees: ''
 ---
 
 # 内容
